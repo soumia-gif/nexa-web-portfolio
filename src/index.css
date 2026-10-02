@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --accent-color: #f472b6;
+  --scrollbar-thumb: rgba(219, 39, 119, 0.45);
+  --scrollbar-track: #07020b;
+}
+
+.dark {
+  --accent-color: #f472b6;
+  --scrollbar-thumb: rgba(219, 39, 119, 0.5);
+  --scrollbar-track: #07020b;
+}
+
+[dir="rtl"] {
+  font-family: 'Cairo', 'Inter', system-ui, sans-serif;
+}
+
+[dir="ltr"] {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Custom Scrollbar - Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+}
+
+/* Custom Scrollbar - Chromium, Safari & Edge */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(236, 72, 153, 0.7);
+}
+
+/* Feminine Selection Glow */
+::selection {
+  background-color: #ec4899;
+  color: #ffffff;
+}
+::-moz-selection {
+  background-color: #ec4899;
+  color: #ffffff;
+}
+
+/* Smooth color transitions */
+body {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+

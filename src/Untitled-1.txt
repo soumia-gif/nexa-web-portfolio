@@ -1,0 +1,45 @@
+# Soumia Tighilt | Full-Stack Web Developer
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <script type="module">import { injectIntoGlobalHook } from "/@react-refresh";
+injectIntoGlobalHook(window);
+window.$RefreshReg$ = () => {};
+window.$RefreshSig$ = () => (type) => type;</script>
+
+    <script type="module" src="/@vite/client"></script>
+
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Soumia Tighilt - Full-Stack Web Developer Portfolio. Conception d'applications web modernes et fonctionnelles avec React, Node.js, Express et MongoDB." />
+    <meta name="color-scheme" content="light dark" />
+    <title>Soumia Tighilt | Full-Stack Web Developer</title>
+    
+    <!-- Google Fonts: Inter & Cairo (for modern Arabic typography) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Anti-FOUC Theme Script (Dark Theme by default) -->
+    <script>
+      (function() {
+        const savedTheme = localStorage.getItem('portfolio-theme');
+        if (savedTheme === 'light') {
+          // If user previously had light, migrate to dark colors
+          localStorage.setItem('portfolio-theme', 'dark');
+        }
+        document.documentElement.classList.add('dark');
+
+        const savedLang = localStorage.getItem('portfolio-lang') || 'en';
+        document.documentElement.lang = savedLang;
+        document.documentElement.dir = savedLang === 'ar' ? 'rtl' : 'ltr';
+      })();
+    </script>
+  </head>
+  <body class="bg-[#07020b] text-[#fdf4f8] dark:bg-[#07020b] dark:text-[#fdf4f8] transition-colors duration-300 antialiased selection:bg-pink-500 selection:text-white">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx?t=1790566368773"></script>
+  </body>
+</html>
